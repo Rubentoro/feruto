@@ -110,3 +110,5 @@ feruto/target/classes/com/oesia/formacion/practica/context/ContextFactory.class
 feruto/target/classes/com/oesia/formacion/practica/remote/RemoteManager.class
 feruto/target/classes/com/oesia/formacion/practica/remote/RemoteManagerImpl.class
 feruto/target/classes/com/oesia/formacion/practica/remote/RemoteSender.class
+feruto/logs/debug.log
+feruto/logs/info.log
