@@ -3,8 +3,7 @@ import static org.junit.Assert.assertEquals;
 import java.util.List;
 
 import org.junit.Before;
-import org.junit.jupiter.api.Test;
-import org.mockito.Mockito;
+import org.junit.Test;
 import org.mockito.MockitoAnnotations;
 
 import com.oesia.formacion.practica.architecture.communications.MessageManager;
@@ -31,6 +30,7 @@ public class PutProcessTest {
 		context.start();
 		articleDao = ContextFactory.getContext().get(ArticleDao.class);
 		messageManager = ContextFactory.getContext().get(MessageManager.class);
+		
 //		operacionBancaria = new OperacionBancariaImpl();
 //		Mockito.when(facadeClienteBanco.findClienteBancoByDni("48914707D")).thenReturn(new ClienteBanco("48914707D", 1500));
 //		Mockito.when(facadeClienteBanco.findClienteBancoByDni("12345678D")).thenReturn(new ClienteBanco("12345678D", 5000));
@@ -47,16 +47,25 @@ public class PutProcessTest {
 	
 	@Test
 	public void putProcessWithArticleSizeNotExist() {
-	
+		String message = "PUT|2|3|85|Pantalones|2|500";
+		messageManager.recive(message);
+		List<Article> articles = articleDao.findAll();
+		assertEquals(message, 0, articles.size()); 
 	}
 	
 	@Test
 	public void putProcessWithNewArticles() {
-		
+		String message = "PUT|1|12|438|Pantalones|1|1|800*1|1|498|Pantalones|1|1|200";
+		messageManager.recive(message);
+		List<Article> articles = articleDao.findAll();
+		assertEquals(message, 2, articles.size()); 
 	}
 	
 	@Test
 	public void putProcessWithOldArticles() {
-		
+		String message = "PUT|1|12|438|Pantalones|1|1|800*1|1|438|Pantalones|1|1|200";
+		messageManager.recive(message);
+		List<Article> articles = articleDao.findAll();
+		assertEquals(message, 1, articles.size()); 
 	}
 }
