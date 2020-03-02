@@ -22,6 +22,6 @@
 ######### Test PUT #########
 ### Con Respuesta OK
 PUT|1|1|438|Camiseta|1|1|500
-PUT|1|12|438|Pantalones|1|1|500*1|1|438|Pantalones|1|1|200
+PUT|1|12|438|Pantalones|1|1|500
 
 

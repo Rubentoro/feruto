@@ -50,7 +50,7 @@ public class ArticleDaoImpl implements ArticleDao {
 			i = a.getId();
 			
 			if (i == article.getId()) {
-				this.update(a);
+				this.update(article);
 				des = true;
 			}
 		}
@@ -62,8 +62,8 @@ public class ArticleDaoImpl implements ArticleDao {
 	@Override
 	public void update(Article article) {
 		Article ar = findById(article.getId());
-		ar = article;
 		ar.setStock(article.getStock()+ar.getStock());
+		ar.setVendor(article.getVendor());
 	}
 
 	@Override
