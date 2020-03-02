@@ -1,9 +1,17 @@
 package com.oesia.formacion.practica.architecture.persistence.daos;
 
+
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.oesia.formacion.practica.architecture.communications.MessageManager;
+import com.oesia.formacion.practica.architecture.domain.model.Article;
+import com.oesia.formacion.practica.architecture.persistence.daos.article.ArticleDao;
+import com.oesia.formacion.practica.context.ContextFactory;
 
 public class PopulateDB {
 	

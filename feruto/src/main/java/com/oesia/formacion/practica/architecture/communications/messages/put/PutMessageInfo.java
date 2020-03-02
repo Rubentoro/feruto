@@ -86,6 +86,7 @@ public class PutMessageInfo {
 		
 		ArticleManager p = ContextFactory.getContext().get(ArticleManager.class);
 		p.add(article);
+		p.insertDB(article);
 		System.out.println(p.findAll());
 		
 	}
