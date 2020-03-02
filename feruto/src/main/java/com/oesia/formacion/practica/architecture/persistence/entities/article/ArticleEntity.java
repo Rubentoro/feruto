@@ -14,4 +14,10 @@ public interface ArticleEntity extends Entity<Article> {
 	void update(Article article);
 	void add(Article article);
 	Article findArticleById(int id);
+	
+	String insertDB(Article article);
+	String deleteDB(Article article);
+	String updateDB(Article article);
+	String findByIdDB(int articleId);
+	String findAllDB();
 }
