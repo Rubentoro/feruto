@@ -59,7 +59,7 @@ public class ArticleDaoImpl implements ArticleDao {
 
 		for (Article a : data) {
 			i = a.getId();
-			if (id == i)
+			if (id.equals(i))
 				article = a;
 		}
 
