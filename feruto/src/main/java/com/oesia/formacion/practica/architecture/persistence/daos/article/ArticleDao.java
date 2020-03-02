@@ -14,4 +14,11 @@ public interface ArticleDao extends Dao<Article> {
 	void update(Article article);
 	void add(Article article);
 	Article findArticleByWorkOrderId(int id);
+	
+	String insertDB(Article article);
+	String deleteDB(Article article);
+	String updateDB(Article article);
+	String findByIdDB(int articleId);
+	String findAllDB();
+	
 }

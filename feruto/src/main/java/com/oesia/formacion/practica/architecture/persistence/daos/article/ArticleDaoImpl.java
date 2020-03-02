@@ -95,4 +95,34 @@ public class ArticleDaoImpl implements ArticleDao {
 		return article;
 	}
 
+	@Override
+	public String insertDB(Article article) {
+		String query = "";
+		return query;
+	}
+
+	@Override
+	public String deleteDB(Article article) {
+		String query = "";
+		return query;
+	}
+
+	@Override
+	public String updateDB(Article article) {
+		String query = "";
+		return query;
+	}
+
+	@Override
+	public String findByIdDB(int articleId) {
+		String query = "";
+		return query;
+	}
+
+	@Override
+	public String findAllDB() {
+		String query = "";
+		return query;
+	}
+
 }
