@@ -4,7 +4,7 @@ package com.oesia.formacion.practica.architecture.domain.model;
 public class Article {
 
 	private final int workOrder;
-	private final int vendor;
+	private  int vendor;
 	private final int id;
 	private String description;
 	private final Colour colour;
@@ -45,6 +45,11 @@ public class Article {
 		return vendor;
 	}
 
+
+	public void setVendor(int vendor) {
+		this.vendor = vendor;
+	}
+
 	public int getId() {
 		return id;
 	}
@@ -57,6 +62,7 @@ public class Article {
 		return size;
 	}
 
+	
 
 
 	public int getWorkOrder() {

@@ -49,7 +49,7 @@ public class MessageManagerImpl implements MessageManager {
 						resultOfMessage = MessageComplete[j];
 					} else {
 
-						resultOfMessage = resultOfMessage + "|" + MessageComplete[j];
+						resultOfMessage = resultOfMessage.concat("|").concat(MessageComplete[j]);
 
 					}
 
@@ -59,7 +59,7 @@ public class MessageManagerImpl implements MessageManager {
 			if (parseMessages.isEmpty()) {
 				parseMessages = resultOfMessage;
 			} else {
-				parseMessages = parseMessages.concat(resultOfMessage) ;
+				parseMessages = parseMessages.concat("*").concat(resultOfMessage) ;
 			}
 		}
 
@@ -80,6 +80,7 @@ public class MessageManagerImpl implements MessageManager {
 
 		MessageFactory factory = new MessageFactory();
 		Message messageSend = factory.create(messageObject);
+		
 		send(messageSend);
 
 	}
