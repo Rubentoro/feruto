@@ -97,31 +97,31 @@ public class ArticleDaoImpl implements ArticleDao {
 
 	@Override
 	public String insertDB(Article article) {
-		String query = "";
+		String query = "INSERT INTO article (workorder,vendor,id,description,colour,size,stock) values ('"+article.getWorkOrder()+"','"+article.getVendor()+"','"+article.getId()+"','"+article.getDescription()+"','"+article.getColour()+"','"+article.getSize()+"','"+article.getStock()+"';";
 		return query;
 	}
 
 	@Override
 	public String deleteDB(Article article) {
-		String query = "";
+		String query = "DELETE FROM article where id='"+article.getId()+"';";
 		return query;
 	}
 
 	@Override
 	public String updateDB(Article article) {
-		String query = "";
+		String query = "UPDATE article set workorder='"+article.getWorkOrder()+"', vendor='"+article.getVendor()+"', description='"+article.getDescription()+"', colour='"+article.getColour()+"', size='"+article.getSize()+"', stock='"+article.getStock()+"' where id='"+article.getId()+"';";
 		return query;
 	}
 
 	@Override
 	public String findByIdDB(int articleId) {
-		String query = "";
+		String query = "SELECT * from article where where id='"+articleId+"';";
 		return query;
 	}
 
 	@Override
 	public String findAllDB() {
-		String query = "";
+		String query = "SELECT * from article;";
 		return query;
 	}
 
