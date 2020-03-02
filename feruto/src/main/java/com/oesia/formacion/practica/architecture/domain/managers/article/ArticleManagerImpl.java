@@ -52,4 +52,29 @@ public class ArticleManagerImpl extends AbstractManager<Article> implements Arti
 		
 		return articleEntity.findById(id);
 	}
+
+	@Override
+	public String insertDB(Article article) {
+		return articleEntity.insertDB(article);
+	}
+
+	@Override
+	public String deleteDB(Article article) {
+		return articleEntity.deleteDB(article);
+	}
+
+	@Override
+	public String updateDB(Article article) {
+		return articleEntity.deleteDB(article);
+	}
+
+	@Override
+	public String findByIdDB(int articleId) {
+		return articleEntity.findByIdDB(articleId);
+	}
+
+	@Override
+	public String findAllDB() {
+		return articleEntity.findAllDB();
+	}
 }

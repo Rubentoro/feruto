@@ -47,4 +47,29 @@ public class ArticleEntityImpl extends AbstractEntity<Article> implements Articl
 	public Article findArticleById(int id) {
 		return articleDao.findById(id);
 	}
+
+	@Override
+	public String insertDB(Article article) {
+		return articleDao.insertDB(article);
+	}
+
+	@Override
+	public String deleteDB(Article article) {
+		return articleDao.deleteDB(article);
+	}
+
+	@Override
+	public String updateDB(Article article) {
+		return articleDao.updateDB(article);
+	}
+
+	@Override
+	public String findByIdDB(int articleId) {
+		return articleDao.findByIdDB(articleId);
+	}
+
+	@Override
+	public String findAllDB() {
+		return articleDao.findAllDB();
+	}
 }
