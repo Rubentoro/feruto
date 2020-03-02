@@ -62,8 +62,8 @@ public class StockMessageInfo {
 
 	@Override
 	public String toString() {
-		return "StockMessageInfo [idArticle=" + idArticle + ", idColor=" + idColor + ", idSize=" + idSize + ", unds="
-				+ unds + ", descriptionArticle=" + descriptionArticle + "]";
+		return "id=" + idArticle + ", color=" + idColor + ", size=" + idSize + ", stock="
+				+ unds + ", description=" + descriptionArticle;
 	}
 
 	
